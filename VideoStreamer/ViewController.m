@@ -20,11 +20,17 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
     NSURL *streamURL = [NSURL URLWithString:@"http://www.thumbafon.com/code_examples/video/segment_example/prog_index.m3u8"];
     NSURL *streamURL2 = [NSURL URLWithString:@"http://video.sina.com/v/flvideo/85927_ts/iphone.m3u8"];
     
+    view1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 230)];
+    [self.view addSubview:view1];
+    
     playerView1 = [[VideoPlayerView alloc] initWithFrame:CGRectMake(0, 0, 320, 230)];
     AVPlayer *player1 = [AVPlayer playerWithURL:streamURL];
     [playerView1 setPlayer:player1];
     [playerView1 setVideoFillMode:AVLayerVideoGravityResizeAspect];
     [view1 addSubview:playerView1];
+    
+    view2 = [[UIView alloc] initWithFrame:CGRectMake(0, 250, 320, 230)];
+    [self.view addSubview:view2];
     
     playerView2 = [[VideoPlayerView alloc] initWithFrame:CGRectMake(0, 0, 320, 230)];
     AVPlayer *player2 = [AVPlayer playerWithURL:streamURL2];

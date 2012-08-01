@@ -12,9 +12,9 @@
 #import "DividerView.h"
 
 @interface ViewController : UIViewController {
-    IBOutlet UIView *view1;
-    IBOutlet UIView *view2;
-    IBOutlet DividerView *dividerView;
+    UIView *view1;
+    UIView *view2;
+    DividerView *dividerView;
     VideoPlayerView *playerView1;
     VideoPlayerView *playerView2;
 }

@@ -16,10 +16,6 @@
 		2744D3F515C88D1500AC85AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2744D3F115C88D1500AC85AC /* ViewController.m */; };
 		2744D3F915C88D5500AC85AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2744D3F615C88D5500AC85AC /* main.m */; };
 		2744D3FA15C88D5500AC85AC /* VideoStreamer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2744D3F715C88D5500AC85AC /* VideoStreamer-Info.plist */; };
-		2744D3FC15C88D9B00AC85AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2744D3F615C88D5500AC85AC /* main.m */; };
-		2744D3FD15C88DAF00AC85AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2744D3EB15C88D1500AC85AC /* AppDelegate.m */; };
-		2744D40215C88DD300AC85AC /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2744D3FE15C88DD300AC85AC /* MainStoryboard_iPad.storyboard */; };
-		2744D40315C88DD300AC85AC /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2744D40015C88DD300AC85AC /* MainStoryboard_iPhone.storyboard */; };
 		2744D40615C88DEA00AC85AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2744D40415C88DEA00AC85AC /* InfoPlist.strings */; };
 		2777084815C608D700B4AC0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2777084715C608D700B4AC0D /* UIKit.framework */; };
 		2777084A15C608D700B4AC0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2777084915C608D700B4AC0D /* Foundation.framework */; };
@@ -54,8 +50,6 @@
 		2744D3F615C88D5500AC85AC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = VideoStreamer/main.m; sourceTree = SOURCE_ROOT; };
 		2744D3F715C88D5500AC85AC /* VideoStreamer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "VideoStreamer-Info.plist"; path = "VideoStreamer/VideoStreamer-Info.plist"; sourceTree = SOURCE_ROOT; };
 		2744D3F815C88D5500AC85AC /* VideoStreamer-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "VideoStreamer-Prefix.pch"; path = "VideoStreamer/VideoStreamer-Prefix.pch"; sourceTree = SOURCE_ROOT; };
-		2744D3FF15C88DD300AC85AC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = VideoStreamer/en.lproj/MainStoryboard_iPad.storyboard; sourceTree = SOURCE_ROOT; };
-		2744D40115C88DD300AC85AC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = VideoStreamer/en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = SOURCE_ROOT; };
 		2744D40515C88DEA00AC85AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = VideoStreamer/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		2777084315C608D700B4AC0D /* VideoStreamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoStreamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2777084715C608D700B4AC0D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -92,15 +86,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2744D40715C88DF600AC85AC /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				2744D3FE15C88DD300AC85AC /* MainStoryboard_iPad.storyboard */,
-				2744D40015C88DD300AC85AC /* MainStoryboard_iPhone.storyboard */,
-			);
-			name = Storyboards;
-			sourceTree = "<group>";
-		};
 		2777083815C608D700B4AC0D = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +129,6 @@
 				2744D3EF15C88D1500AC85AC /* VideoPlayerView.m */,
 				2744D3F015C88D1500AC85AC /* ViewController.h */,
 				2744D3F115C88D1500AC85AC /* ViewController.m */,
-				2744D40715C88DF600AC85AC /* Storyboards */,
 				2777084E15C608D700B4AC0D /* Supporting Files */,
 			);
 			name = VideoStreamer;
@@ -233,8 +217,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2744D3FA15C88D5500AC85AC /* VideoStreamer-Info.plist in Resources */,
-				2744D40215C88DD300AC85AC /* MainStoryboard_iPad.storyboard in Resources */,
-				2744D40315C88DD300AC85AC /* MainStoryboard_iPhone.storyboard in Resources */,
 				2744D40615C88DEA00AC85AC /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,8 +256,6 @@
 				2744D3F415C88D1500AC85AC /* VideoPlayerView.m in Sources */,
 				2744D3F515C88D1500AC85AC /* ViewController.m in Sources */,
 				2744D3F915C88D5500AC85AC /* main.m in Sources */,
-				2744D3FC15C88D9B00AC85AC /* main.m in Sources */,
-				2744D3FD15C88DAF00AC85AC /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,22 +277,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2744D3FE15C88DD300AC85AC /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2744D3FF15C88DD300AC85AC /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		2744D40015C88DD300AC85AC /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2744D40115C88DD300AC85AC /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
 		2744D40415C88DEA00AC85AC /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -344,7 +308,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,7 +327,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -375,8 +339,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VideoStreamer2/VideoStreamer-Prefix.pch";
-				INFOPLIST_FILE = "VideoStreamer2/VideoStreamer-Info.plist";
+				GCC_PREFIX_HEADER = "VideoStreamer/VideoStreamer-Prefix.pch";
+				INFOPLIST_FILE = "VideoStreamer/VideoStreamer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = VideoStreamer;
 				WRAPPER_EXTENSION = app;
 			};
@@ -386,8 +351,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VideoStreamer2/VideoStreamer-Prefix.pch";
-				INFOPLIST_FILE = "VideoStreamer2/VideoStreamer-Info.plist";
+				GCC_PREFIX_HEADER = "VideoStreamer/VideoStreamer-Prefix.pch";
+				INFOPLIST_FILE = "VideoStreamer/VideoStreamer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = VideoStreamer;
 				WRAPPER_EXTENSION = app;
 			};

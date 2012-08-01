@@ -11,11 +11,18 @@
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize rootViewController = _rootViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     [application setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.rootViewController = [[ViewController alloc] init];
+    [self.window addSubview:self.rootViewController.view];
+    [self.window makeKeyAndVisible];
+    [self.window layoutSubviews];
+    
     return YES;
 }
 							
