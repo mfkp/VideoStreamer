@@ -9,9 +9,6 @@
 
 #import "ViewController.h"
 
-static void *AVPlayerDemoPlaybackViewControllerCurrentItemObservationContext = &AVPlayerDemoPlaybackViewControllerCurrentItemObservationContext;
-static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPlayerDemoPlaybackViewControllerStatusObservationContext;
-
 @implementation ViewController
 
 - (void)viewDidLoad {
