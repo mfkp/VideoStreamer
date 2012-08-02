@@ -17,6 +17,8 @@
 		2744D3F915C88D5500AC85AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2744D3F615C88D5500AC85AC /* main.m */; };
 		2744D3FA15C88D5500AC85AC /* VideoStreamer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2744D3F715C88D5500AC85AC /* VideoStreamer-Info.plist */; };
 		2744D40615C88DEA00AC85AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2744D40415C88DEA00AC85AC /* InfoPlist.strings */; };
+		274C0D9B15CA461900EB3FD8 /* CoolButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 274C0D9A15CA461900EB3FD8 /* CoolButton.m */; };
+		274C0D9F15CA470000EB3FD8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 274C0D9E15CA470000EB3FD8 /* QuartzCore.framework */; };
 		2777084815C608D700B4AC0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2777084715C608D700B4AC0D /* UIKit.framework */; };
 		2777084A15C608D700B4AC0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2777084915C608D700B4AC0D /* Foundation.framework */; };
 		2777084C15C608D700B4AC0D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2777084B15C608D700B4AC0D /* CoreGraphics.framework */; };
@@ -51,12 +53,16 @@
 		2744D3F715C88D5500AC85AC /* VideoStreamer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "VideoStreamer-Info.plist"; path = "VideoStreamer/VideoStreamer-Info.plist"; sourceTree = SOURCE_ROOT; };
 		2744D3F815C88D5500AC85AC /* VideoStreamer-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "VideoStreamer-Prefix.pch"; path = "VideoStreamer/VideoStreamer-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		2744D40515C88DEA00AC85AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = VideoStreamer/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		274C0D9915CA461900EB3FD8 /* CoolButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoolButton.h; sourceTree = "<group>"; };
+		274C0D9A15CA461900EB3FD8 /* CoolButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoolButton.m; sourceTree = "<group>"; };
+		274C0D9E15CA470000EB3FD8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2777084315C608D700B4AC0D /* VideoStreamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoStreamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2777084715C608D700B4AC0D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2777084915C608D700B4AC0D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2777084B15C608D700B4AC0D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2777086715C608D700B4AC0D /* VideoStreamerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoStreamerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2777086815C608D700B4AC0D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		27991AA915CA40B70075EEA8 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = constants.h; path = VideoStreamer/constants.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				274C0D9F15CA470000EB3FD8 /* QuartzCore.framework in Frameworks */,
 				2744D39915C78EF600AC85AC /* CoreMedia.framework in Frameworks */,
 				2744D39115C6128000AC85AC /* AVFoundation.framework in Frameworks */,
 				2744D38E15C6106900AC85AC /* MediaPlayer.framework in Frameworks */,
@@ -86,9 +93,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		274C0D9D15CA461E00EB3FD8 /* CoolButton */ = {
+			isa = PBXGroup;
+			children = (
+				274C0D9915CA461900EB3FD8 /* CoolButton.h */,
+				274C0D9A15CA461900EB3FD8 /* CoolButton.m */,
+			);
+			name = CoolButton;
+			sourceTree = "<group>";
+		};
 		2777083815C608D700B4AC0D = {
 			isa = PBXGroup;
 			children = (
+				274C0D9E15CA470000EB3FD8 /* QuartzCore.framework */,
 				2744D39815C78EF600AC85AC /* CoreMedia.framework */,
 				2744D39015C6128000AC85AC /* AVFoundation.framework */,
 				2744D38D15C6106900AC85AC /* MediaPlayer.framework */,
@@ -110,6 +127,7 @@
 		2777084615C608D700B4AC0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				274C0D9D15CA461E00EB3FD8 /* CoolButton */,
 				2777084715C608D700B4AC0D /* UIKit.framework */,
 				2777084915C608D700B4AC0D /* Foundation.framework */,
 				2777084B15C608D700B4AC0D /* CoreGraphics.framework */,
@@ -142,6 +160,7 @@
 				2744D3F615C88D5500AC85AC /* main.m */,
 				2744D3F715C88D5500AC85AC /* VideoStreamer-Info.plist */,
 				2744D3F815C88D5500AC85AC /* VideoStreamer-Prefix.pch */,
+				27991AA915CA40B70075EEA8 /* constants.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -256,6 +275,7 @@
 				2744D3F415C88D1500AC85AC /* VideoPlayerView.m in Sources */,
 				2744D3F515C88D1500AC85AC /* ViewController.m in Sources */,
 				2744D3F915C88D5500AC85AC /* main.m in Sources */,
+				274C0D9B15CA461900EB3FD8 /* CoolButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

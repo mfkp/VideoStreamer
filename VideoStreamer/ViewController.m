@@ -9,6 +9,9 @@
 
 #import "ViewController.h"
 
+#define playcolor RGB(15, 145, 0)
+#define pausecolor RGB(175, 0, 0)
+
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -21,7 +24,7 @@
     [self.view addSubview:view1];
     
     playerView1 = [[VideoPlayerView alloc] initWithFrame:CGRectMake(0, 0, 320, 230)];
-    AVPlayer *player1 = [AVPlayer playerWithURL:streamURL];
+    player1 = [AVPlayer playerWithURL:streamURL];
     [playerView1 setPlayer:player1];
     [playerView1 setVideoFillMode:AVLayerVideoGravityResizeAspect];
     [view1 addSubview:playerView1];
@@ -30,7 +33,7 @@
     [self.view addSubview:view2];
     
     playerView2 = [[VideoPlayerView alloc] initWithFrame:CGRectMake(0, 0, 320, 230)];
-    AVPlayer *player2 = [AVPlayer playerWithURL:streamURL2];
+    player2 = [AVPlayer playerWithURL:streamURL2];
     [playerView2 setPlayer:player2];
     [playerView2 setVideoFillMode:AVLayerVideoGravityResizeAspect];
     [view2 addSubview:playerView2];
@@ -38,8 +41,12 @@
     dividerView = [[DividerView alloc] initWithFrame:CGRectMake(0, 230, 320, 20)];
     [self.view addSubview:dividerView];
     
-    [player1 play];
-    [player2 play];
+    playButton = [[CoolButton alloc] initWithFrame:CGRectMake(5, 5, 60, 30)];
+    [playButton setButtonColor:playcolor];
+    [playButton setTitle:@"Play" forState:UIControlStateNormal];
+    [playButton addTarget:self action:@selector(playButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:playButton];
+    [self.view bringSubviewToFront:playButton];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receiveNotification:) 
@@ -51,6 +58,20 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void) playButtonPressed {
+    if ([playButton.titleLabel.text isEqualToString:@"Play"]) {
+        [playButton setTitle:@"Pause" forState:UIControlStateNormal];
+        [playButton setButtonColor:pausecolor];
+        [player1 play];
+        [player2 play];
+    } else {
+        [playButton setTitle:@"Play" forState:UIControlStateNormal];
+        [playButton setButtonColor:playcolor];
+        [player1 pause];
+        [player2 pause];
+    }
 }
 
 - (void) receiveNotification:(NSNotification *) notification {
@@ -98,6 +119,7 @@
     [dividerView removeFromSuperview];
     dividerView = [[DividerView alloc] initWithFrame:dividerView.frame];
     [self.view addSubview:dividerView];
+    [self.view bringSubviewToFront:playButton];
 }
 
 @end
