@@ -17,8 +17,8 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSURL *streamURL = [NSURL URLWithString:@"http://www.thumbafon.com/code_examples/video/segment_example/prog_index.m3u8"];
-    NSURL *streamURL2 = [NSURL URLWithString:@"http://video.sina.com/v/flvideo/85927_ts/iphone.m3u8"];
+    NSURL *streamURL = [NSURL URLWithString:@"http://mfkp-zencoder.s3.amazonaws.com/CoderDojo/Video/CoderDojoVideo.m3u8"];
+    NSURL *streamURL2 = [NSURL URLWithString:@"http://mfkp-zencoder.s3.amazonaws.com/CoderDojo/CoderDojo.m3u8"];
     
     view1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 230)];
     [self.view addSubview:view1];
@@ -84,11 +84,7 @@ static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPla
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     [UIView setAnimationsEnabled:NO];
     
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return YES;
-    }
+    return YES;
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
