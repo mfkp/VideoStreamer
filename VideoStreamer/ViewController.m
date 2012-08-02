@@ -108,18 +108,23 @@
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
     [UIView setAnimationsEnabled:YES];
     
-    // swap width and height, x and y
-    view1.frame = CGRectMake(0, 0, view1.frame.size.height, view1.frame.size.width);
-    playerView1.frame = CGRectMake(0, 0, playerView1.frame.size.height, playerView1.frame.size.width);
-    dividerView.frame = CGRectMake(dividerView.frame.origin.y, dividerView.frame.origin.x, dividerView.frame.size.height, dividerView.frame.size.width);
-    view2.frame = CGRectMake(view2.frame.origin.y, view2.frame.origin.x, view2.frame.size.height, view2.frame.size.width);
-    playerView2.frame = CGRectMake(0, 0, playerView2.frame.size.height, playerView2.frame.size.width);
-    
-    // refresh the divider handles
-    [dividerView removeFromSuperview];
-    dividerView = [[DividerView alloc] initWithFrame:dividerView.frame];
-    [self.view addSubview:dividerView];
-    [self.view bringSubviewToFront:playButton];
+    UIInterfaceOrientation currentOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+    if ((UIInterfaceOrientationIsLandscape(currentOrientation) && !UIInterfaceOrientationIsLandscape(fromInterfaceOrientation)) ||
+        (UIInterfaceOrientationIsPortrait(currentOrientation) && !UIInterfaceOrientationIsPortrait(fromInterfaceOrientation))) {
+        
+        // swap width and height, x and y
+        view1.frame = CGRectMake(0, 0, view1.frame.size.height, view1.frame.size.width);
+        playerView1.frame = CGRectMake(0, 0, playerView1.frame.size.height, playerView1.frame.size.width);
+        dividerView.frame = CGRectMake(dividerView.frame.origin.y, dividerView.frame.origin.x, dividerView.frame.size.height, dividerView.frame.size.width);
+        view2.frame = CGRectMake(view2.frame.origin.y, view2.frame.origin.x, view2.frame.size.height, view2.frame.size.width);
+        playerView2.frame = CGRectMake(0, 0, playerView2.frame.size.height, playerView2.frame.size.width);
+        
+        // refresh the divider handles
+        [dividerView removeFromSuperview];
+        dividerView = [[DividerView alloc] initWithFrame:dividerView.frame];
+        [self.view addSubview:dividerView];
+        [self.view bringSubviewToFront:playButton];
+    }
 }
 
 @end
